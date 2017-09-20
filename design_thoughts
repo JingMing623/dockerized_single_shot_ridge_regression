@@ -1,0 +1,28 @@
+In the current scheme, within each computation, there will be a cache and a docker box for that computation. Cache will be in both local and remote side.
+
+how coinstac save the variables in the cache? 
+
+The input of every docker will be something like
+
+{
+  input:{}
+  cache:{}
+  state:{}
+}
+
+
+The output of every docker will be something like
+
+{
+  cache:{}
+  state:{}
+  output:{}
+}
+
+coinstac will save the output field of each run into the input field of next run.
+so when dump the result variables out, we need to specify the field to hold the variables. 
+
+And for the original dataset, we need to read in from the initial input and save them into the local cache
+
+coinstac retrieve the final output from the remote node's output
+

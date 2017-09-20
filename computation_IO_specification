@@ -1,0 +1,30 @@
+#single-shot-ridge-regression input and output specification
+
+input :
+ 
+{
+   X (Covariate Matrix) : array (number)
+   Y (Dependnent Matrix) : array (number)
+   #X_label (Covariate name list) : array (string)  
+   #Y_label (Dependent name list) : array (string)
+   lambda : number
+}
+
+output : 
+
+{  
+   avg_beta_vector (global beta vector) : array (number)
+   beta_vector_local (local beta vector for each site) : array (number)
+   dof_global (global degree of freedom) : number 
+   dof_local (local degree of freedom) : array (number)
+   r_2_global (global goodness of fit) : number
+   r_2_local (local goodness of fit) : number
+   ts_global (global covariate effect on depdendent) : array (number)
+   ts_local (local covariate effect on dependent) : array (number)
+   ps_global (global p value for global t value) : array (number)
+   ps_local (local p value for local t value) : array (number)
+}
+
+     
+
+
